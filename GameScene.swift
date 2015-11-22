@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var starfield: SKEmitterNode!
     var player: SKSpriteNode!
     
-    var possibleEnemies = ["ball", "hammer", "tv"]
+    var possibleEnemies = ["asteroid1", "asteroid2", "asteroid3"]
     var gameTimer: NSTimer!
     var isDead = false
     
@@ -43,7 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         starfield.zPosition = -1
         
         player = SKSpriteNode(imageNamed: "player")
-        player.position = CGPoint(x: 100, y: 384)
+        player.position = CGPoint(x: 200, y: 384)
         player.physicsBody = SKPhysicsBody(texture: player.texture!, size: player.size)
         player.physicsBody!.contactTestBitMask = 1
         addChild(player)

@@ -16,6 +16,10 @@ class MenuScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
+        var background = SKSpriteNode(imageNamed: "background2")
+        background.anchorPoint = CGPoint(x: 0, y: 0)
+        background.position = .zero
+        addChild(background)
         playButton = SKSpriteNode(texture: playButtonTex)
         playButton.position = CGPointMake(frame.midX, frame.midY)
         self.addChild(playButton)
