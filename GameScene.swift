@@ -15,12 +15,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var possibleEnemies = ["ball", "hammer", "tv"]
     var gameTimer: NSTimer!
-    var gameOver = false
+    var isDead = false
+    
+    var objectSpawnRate : Double! = 1.0
     
     var scoreLabel: SKLabelNode!
     var score: Int = 0 {
         didSet {
             scoreLabel.text = "Score: \(score)"
+        }
+    }
+    
+    var livesLabel: SKLabelNode!
+    var lives: Int = 3 {
+        didSet {
+            livesLabel.text = "Lives: \(lives)"
         }
     }
     
@@ -44,17 +53,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.horizontalAlignmentMode = .Left
         addChild(scoreLabel)
         
+        livesLabel = SKLabelNode(fontNamed: "Chalkduster")
+        livesLabel.position = CGPoint(x: 360, y: 16)
+        livesLabel.horizontalAlignmentMode = .Left
+        addChild(livesLabel)
+        
         score = 0
+        lives = 3
         
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
         
-        gameTimer = NSTimer.scheduledTimerWithTimeInterval(0.35, target: self, selector: "createEnemy", userInfo: nil, repeats: true)
-    }
-    
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
+        gameTimer = NSTimer.scheduledTimerWithTimeInterval(objectSpawnRate, target: self, selector: "createEnemy", userInfo: nil, repeats: true)
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -63,10 +73,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 node.removeFromParent()
             }
         }
-        
-        if !gameOver {
+        // add score every frame if still playing
+        if !isDead {
             score += 1
         }
+        // restart on game over
+        else{
+            let transition = SKTransition.revealWithDirection(.Right, duration: 0.0)
+            let nextScene = GameScene(size:scene!.size)
+            nextScene.scaleMode = .AspectFill
+            scene?.view?.presentScene(nextScene, transition: transition)
+            lives -= 1
+        }
+        
+        objectSpawnRate = 1.0 - Double(score/100)/10
+        print(objectSpawnRate)
     }
     
     func createEnemy() {
@@ -89,10 +110,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let touch = touches.first else { return }
         var location = touch.locationInNode(self)
         
+        // clamp the y axis
         if location.y < 100 {
             location.y = 100
         } else if location.y > 668 {
             location.y = 668
+        }
+        
+        // clamp the x axis
+        if location.x < 100 {
+            location.x = 100
+        } else if location.x > 900 {
+            location.x = 900
         }
         
         player.position = location
@@ -105,6 +134,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player.removeFromParent()
         
-        gameOver = true
+        isDead = true
     }
 }
