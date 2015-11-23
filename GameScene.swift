@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var starfield: SKEmitterNode!
     var player: SKSpriteNode!
     
-    var possibleEnemies = ["asteroid1", "asteroid2", "asteroid3"]
+    var possibleEnemies = ["asteroid-5", "asteroid-2", "asteroid-3", "asteroid-4"]
     var gameTimer: NSTimer!
     var isDead = false
     
@@ -79,11 +79,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         // restart on game over
         else{
+            let seconds = 2.0
+            let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             let transition = SKTransition.revealWithDirection(.Right, duration: 0.0)
-            let nextScene = GameScene(size:scene!.size)
+            let nextScene = GameOverScene(size: self.size, won: true)
             nextScene.scaleMode = .AspectFill
-            scene?.view?.presentScene(nextScene, transition: transition)
-            lives -= 1
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                self.scene?.view?.presentScene(nextScene, transition: transition)
+                self.lives -= 1
+            })
+            
         }
         
         objectSpawnRate = 1.0 - Double(score/100)/10
@@ -92,7 +99,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func createEnemy() {
         possibleEnemies = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(possibleEnemies) as! [String]
-        let randomDistribution = GKRandomDistribution(lowestValue: 50, highestValue: 736)
+        let randomDistribution = GKRandomDistribution(lowestValue: 150, highestValue: 600)
         
         let sprite = SKSpriteNode(imageNamed: possibleEnemies[0])
         sprite.position = CGPoint(x: 1200, y: randomDistribution.nextInt())

@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B38FE831BFF643300F7952C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE821BFF643300F7952C /* GameScene.sks */; settings = {ASSET_TAGS = (); }; };
-		1B38FE931BFF66B300F7952C /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE871BFF66B300F7952C /* explosion.sks */; settings = {ASSET_TAGS = (); }; };
-		1B38FE991BFF66B300F7952C /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE8D1BFF66B300F7952C /* Starfield.sks */; settings = {ASSET_TAGS = (); }; };
-		1B38FE9E1BFF6CC700F7952C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9D1BFF6CC700F7952C /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		1B38FEA01BFF6FE100F7952C /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9F1BFF6FE100F7952C /* MenuScene.sks */; settings = {ASSET_TAGS = (); }; };
-		1B38FEA41BFF706D00F7952C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38FEA31BFF706D00F7952C /* MenuScene.swift */; settings = {ASSET_TAGS = (); }; };
-		1B74370C1C03647F00A8B324 /* Imperium_Spaceship_Concept_Art_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B74370B1C03647F00A8B324 /* Imperium_Spaceship_Concept_Art_02.jpg */; settings = {ASSET_TAGS = (); }; };
+		1B38FE831BFF643300F7952C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE821BFF643300F7952C /* GameScene.sks */; };
+		1B38FE931BFF66B300F7952C /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE871BFF66B300F7952C /* explosion.sks */; };
+		1B38FE991BFF66B300F7952C /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE8D1BFF66B300F7952C /* Starfield.sks */; };
+		1B38FE9E1BFF6CC700F7952C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9D1BFF6CC700F7952C /* Main.storyboard */; };
+		1B38FEA01BFF6FE100F7952C /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9F1BFF6FE100F7952C /* MenuScene.sks */; };
+		1B38FEA41BFF706D00F7952C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38FEA31BFF706D00F7952C /* MenuScene.swift */; };
 		547D79291BFF548600E4A6AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D79281BFF548600E4A6AB /* AppDelegate.swift */; };
 		547D792D1BFF548600E4A6AB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D792C1BFF548600E4A6AB /* GameViewController.swift */; };
 		547D79321BFF548600E4A6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547D79311BFF548600E4A6AB /* Assets.xcassets */; };
 		547D79351BFF548600E4A6AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547D79331BFF548600E4A6AB /* LaunchScreen.storyboard */; };
-		547D793D1BFF561600E4A6AB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D793C1BFF561600E4A6AB /* GameScene.swift */; settings = {ASSET_TAGS = (); }; };
+		547D793D1BFF561600E4A6AB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D793C1BFF561600E4A6AB /* GameScene.swift */; };
+		9F71A0A51C03B4A2003DCEBF /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71A0A41C03B4A2003DCEBF /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		1B38FE9D1BFF6CC700F7952C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1B38FE9F1BFF6FE100F7952C /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		1B38FEA31BFF706D00F7952C /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
-		1B74370B1C03647F00A8B324 /* Imperium_Spaceship_Concept_Art_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Imperium_Spaceship_Concept_Art_02.jpg; sourceTree = "<group>"; };
 		547D79251BFF548600E4A6AB /* SpaceRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547D79281BFF548600E4A6AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		547D792C1BFF548600E4A6AB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		547D79341BFF548600E4A6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		547D79361BFF548600E4A6AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		547D793C1BFF561600E4A6AB /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = ../GameScene.swift; sourceTree = "<group>"; };
+		9F71A0A41C03B4A2003DCEBF /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,6 @@
 			children = (
 				1B38FE871BFF66B300F7952C /* explosion.sks */,
 				1B38FE8D1BFF66B300F7952C /* Starfield.sks */,
-				1B74370B1C03647F00A8B324 /* Imperium_Spaceship_Concept_Art_02.jpg */,
 			);
 			name = Content;
 			path = ..;
@@ -83,6 +82,7 @@
 				1B38FEA31BFF706D00F7952C /* MenuScene.swift */,
 				1B38FE821BFF643300F7952C /* GameScene.sks */,
 				547D793C1BFF561600E4A6AB /* GameScene.swift */,
+				9F71A0A41C03B4A2003DCEBF /* GameOverScene.swift */,
 				547D79281BFF548600E4A6AB /* AppDelegate.swift */,
 				547D792C1BFF548600E4A6AB /* GameViewController.swift */,
 				1B38FE9D1BFF6CC700F7952C /* Main.storyboard */,
@@ -156,7 +156,6 @@
 				1B38FEA01BFF6FE100F7952C /* MenuScene.sks in Resources */,
 				1B38FE9E1BFF6CC700F7952C /* Main.storyboard in Resources */,
 				547D79351BFF548600E4A6AB /* LaunchScreen.storyboard in Resources */,
-				1B74370C1C03647F00A8B324 /* Imperium_Spaceship_Concept_Art_02.jpg in Resources */,
 				1B38FE931BFF66B300F7952C /* explosion.sks in Resources */,
 				547D79321BFF548600E4A6AB /* Assets.xcassets in Resources */,
 			);
@@ -169,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F71A0A51C03B4A2003DCEBF /* GameOverScene.swift in Sources */,
 				547D793D1BFF561600E4A6AB /* GameScene.swift in Sources */,
 				1B38FEA41BFF706D00F7952C /* MenuScene.swift in Sources */,
 				547D792D1BFF548600E4A6AB /* GameViewController.swift in Sources */,
