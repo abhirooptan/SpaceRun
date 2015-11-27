@@ -8,10 +8,13 @@
 
 import GameplayKit
 import SpriteKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var starfield: SKEmitterNode!
     var player: SKSpriteNode!
+    var backgroundMusic : AVAudioPlayer?
+    var explosionSound  : AVAudioPlayer?
     
     var possibleEnemies = ["asteroid-5", "asteroid-2", "asteroid-3", "asteroid-4"]
     var gameTimer: NSTimer!
@@ -65,6 +68,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         
         gameTimer = NSTimer.scheduledTimerWithTimeInterval(objectSpawnRate, target: self, selector: "createEnemy", userInfo: nil, repeats: true)
+        
+        if (backgroundMusic == nil) {
+            print("Creating bacjground music player")
+            backgroundMusic = GameViewController().playAudio("background")
+        
+        }
+        
+        explosionSound  = GameViewController().playAudio("explosion")
+        
+        if((backgroundMusic?.playing) == false){
+            backgroundMusic?.prepareToPlay()
+            backgroundMusic?.play()
+            backgroundMusic?.numberOfLoops = -1
+        }
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -94,7 +111,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         objectSpawnRate = 1.0 - Double(score/100)/10
-        print(objectSpawnRate)
     }
     
     func createEnemy() {
@@ -138,6 +154,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let explosion = SKEmitterNode(fileNamed: "explosion.sks")!
         explosion.position = player.position
         addChild(explosion)
+        
+        backgroundMusic?.stop()
+        
+        explosionSound?.prepareToPlay()
+        explosionSound?.play()
+        explosionSound?.numberOfLoops = 0
         
         player.removeFromParent()
         

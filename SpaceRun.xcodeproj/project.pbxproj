@@ -13,6 +13,19 @@
 		1B38FE9E1BFF6CC700F7952C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9D1BFF6CC700F7952C /* Main.storyboard */; };
 		1B38FEA01BFF6FE100F7952C /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9F1BFF6FE100F7952C /* MenuScene.sks */; };
 		1B38FEA41BFF706D00F7952C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38FEA31BFF706D00F7952C /* MenuScene.swift */; };
+		1B85D5961C0890A90037E16B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B85D5951C0890A90037E16B /* AVFoundation.framework */; };
+		1B85D5981C08A2670037E16B /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5971C08A2670037E16B /* background.wav */; settings = {ASSET_TAGS = (); }; };
+		1B85D59B1C08A5CD0037E16B /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D59A1C08A5CD0037E16B /* explosion.wav */; settings = {ASSET_TAGS = (); }; };
+		1B85D5BD1C08B6F50037E16B /* asteroid-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5B31C08B6F50037E16B /* asteroid-1.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5BE1C08B6F50037E16B /* asteroid-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5B41C08B6F50037E16B /* asteroid-2.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5BF1C08B6F50037E16B /* asteroid-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5B51C08B6F50037E16B /* asteroid-3.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5C01C08B6F50037E16B /* asteroid-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5B61C08B6F50037E16B /* asteroid-4.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5C11C08B6F50037E16B /* asteroid-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5B71C08B6F50037E16B /* asteroid-5.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5C21C08B6F50037E16B /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5B81C08B6F50037E16B /* background1.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5C31C08B6F50037E16B /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5B91C08B6F50037E16B /* background2.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5C41C08B6F50037E16B /* bigSpark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5BA1C08B6F50037E16B /* bigSpark.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5C51C08B6F50037E16B /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5BB1C08B6F50037E16B /* play.png */; settings = {ASSET_TAGS = (); }; };
+		1B85D5C61C08B6F50037E16B /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B85D5BC1C08B6F50037E16B /* spark.png */; settings = {ASSET_TAGS = (); }; };
 		547D79291BFF548600E4A6AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D79281BFF548600E4A6AB /* AppDelegate.swift */; };
 		547D792D1BFF548600E4A6AB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D792C1BFF548600E4A6AB /* GameViewController.swift */; };
 		547D79321BFF548600E4A6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 547D79311BFF548600E4A6AB /* Assets.xcassets */; };
@@ -28,6 +41,19 @@
 		1B38FE9D1BFF6CC700F7952C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1B38FE9F1BFF6FE100F7952C /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		1B38FEA31BFF706D00F7952C /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		1B85D5951C0890A90037E16B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1B85D5971C08A2670037E16B /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = background.wav; path = SpaceRun/background.wav; sourceTree = "<group>"; };
+		1B85D59A1C08A5CD0037E16B /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		1B85D5B31C08B6F50037E16B /* asteroid-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-1.png"; sourceTree = "<group>"; };
+		1B85D5B41C08B6F50037E16B /* asteroid-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-2.png"; sourceTree = "<group>"; };
+		1B85D5B51C08B6F50037E16B /* asteroid-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-3.png"; sourceTree = "<group>"; };
+		1B85D5B61C08B6F50037E16B /* asteroid-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-4.png"; sourceTree = "<group>"; };
+		1B85D5B71C08B6F50037E16B /* asteroid-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asteroid-5.png"; sourceTree = "<group>"; };
+		1B85D5B81C08B6F50037E16B /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
+		1B85D5B91C08B6F50037E16B /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		1B85D5BA1C08B6F50037E16B /* bigSpark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigSpark.png; sourceTree = "<group>"; };
+		1B85D5BB1C08B6F50037E16B /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		1B85D5BC1C08B6F50037E16B /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		547D79251BFF548600E4A6AB /* SpaceRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547D79281BFF548600E4A6AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		547D792C1BFF548600E4A6AB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B85D5961C0890A90037E16B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +79,16 @@
 		1B38FE9C1BFF66C600F7952C /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				1B85D5B31C08B6F50037E16B /* asteroid-1.png */,
+				1B85D5B41C08B6F50037E16B /* asteroid-2.png */,
+				1B85D5B51C08B6F50037E16B /* asteroid-3.png */,
+				1B85D5B61C08B6F50037E16B /* asteroid-4.png */,
+				1B85D5B71C08B6F50037E16B /* asteroid-5.png */,
+				1B85D5B81C08B6F50037E16B /* background1.png */,
+				1B85D5B91C08B6F50037E16B /* background2.png */,
+				1B85D5BA1C08B6F50037E16B /* bigSpark.png */,
+				1B85D5BB1C08B6F50037E16B /* play.png */,
+				1B85D5BC1C08B6F50037E16B /* spark.png */,
 				1B38FE871BFF66B300F7952C /* explosion.sks */,
 				1B38FE8D1BFF66B300F7952C /* Starfield.sks */,
 			);
@@ -59,9 +96,20 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		1B85D5991C08A3130037E16B /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				1B85D59A1C08A5CD0037E16B /* explosion.wav */,
+				1B85D5971C08A2670037E16B /* background.wav */,
+			);
+			name = Audio;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		547D791C1BFF548500E4A6AB = {
 			isa = PBXGroup;
 			children = (
+				1B85D5951C0890A90037E16B /* AVFoundation.framework */,
 				547D79271BFF548600E4A6AB /* SpaceRun */,
 				547D79261BFF548600E4A6AB /* Products */,
 			);
@@ -89,6 +137,7 @@
 				547D79311BFF548600E4A6AB /* Assets.xcassets */,
 				547D79331BFF548600E4A6AB /* LaunchScreen.storyboard */,
 				547D79361BFF548600E4A6AB /* Info.plist */,
+				1B85D5991C08A3130037E16B /* Audio */,
 				1B38FE9C1BFF66C600F7952C /* Content */,
 			);
 			path = SpaceRun;
@@ -151,12 +200,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B85D59B1C08A5CD0037E16B /* explosion.wav in Resources */,
 				1B38FE991BFF66B300F7952C /* Starfield.sks in Resources */,
+				1B85D5C11C08B6F50037E16B /* asteroid-5.png in Resources */,
 				1B38FE831BFF643300F7952C /* GameScene.sks in Resources */,
+				1B85D5C31C08B6F50037E16B /* background2.png in Resources */,
+				1B85D5981C08A2670037E16B /* background.wav in Resources */,
+				1B85D5C61C08B6F50037E16B /* spark.png in Resources */,
+				1B85D5BF1C08B6F50037E16B /* asteroid-3.png in Resources */,
+				1B85D5C41C08B6F50037E16B /* bigSpark.png in Resources */,
+				1B85D5BD1C08B6F50037E16B /* asteroid-1.png in Resources */,
 				1B38FEA01BFF6FE100F7952C /* MenuScene.sks in Resources */,
 				1B38FE9E1BFF6CC700F7952C /* Main.storyboard in Resources */,
+				1B85D5C51C08B6F50037E16B /* play.png in Resources */,
+				1B85D5BE1C08B6F50037E16B /* asteroid-2.png in Resources */,
+				1B85D5C01C08B6F50037E16B /* asteroid-4.png in Resources */,
 				547D79351BFF548600E4A6AB /* LaunchScreen.storyboard in Resources */,
 				1B38FE931BFF66B300F7952C /* explosion.sks in Resources */,
+				1B85D5C21C08B6F50037E16B /* background1.png in Resources */,
 				547D79321BFF548600E4A6AB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

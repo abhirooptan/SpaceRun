@@ -8,8 +8,29 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class GameViewController: UIViewController {
+    
+    var audioPlayer:AVAudioPlayer?
+    var score           : Int = 0
+    var lives           : Int = 3
+    var objectSpawnRate : Double = 1.0
+    
+    
+    func playAudio(file:NSString)-> AVAudioPlayer {
+        
+        let soundFileURL = NSBundle.mainBundle().URLForResource(file as String,
+            withExtension:"wav")
+        
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOfURL: soundFileURL!)
+        } catch{
+            print("File not found")
+        }
+        
+        return audioPlayer!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +50,8 @@ class GameViewController: UIViewController {
             skView.presentScene(scene)
         }
     }
+    
+    
     
     override func shouldAutorotate() -> Bool {
         return true

@@ -44,8 +44,9 @@ class GameOverScene: SKScene {
             SKAction.waitForDuration(3.0),
             SKAction.runBlock() {
                 // 5
+                GameScene().backgroundMusic?.stop()
                 let reveal = SKTransition.flipHorizontalWithDuration(0.5)
-                let scene = GameScene(size: size)
+                let scene = MenuScene(size: size)
                 self.view?.presentScene(scene, transition:reveal)
             }
             ]))
