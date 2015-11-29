@@ -35,6 +35,10 @@ class MenuScene: SKScene {
                     let nextScene = GameScene(size:scene!.size)
                     nextScene.scaleMode = .AspectFill
                     scene?.view?.presentScene(nextScene, transition: transition)
+                    /*let transition = SKTransition.revealWithDirection(.Right, duration: 0.0)
+                    let nextScene = GameOverScene(size: self.size, won: true)
+                    nextScene.scaleMode = .AspectFill
+                    self.scene?.view?.presentScene(nextScene, transition: transition)*/
             }
         }
     }

@@ -12,6 +12,9 @@ import SpriteKit
 class GameOverScene: SKScene {
     
     var starfield: SKEmitterNode!
+    var highScore = 0
+    var scoreVal = 0
+    
     
     init(size: CGSize, won:Bool) {
         
@@ -27,21 +30,54 @@ class GameOverScene: SKScene {
         backgroundColor = SKColor.blackColor()
         
         // 2
+        var scoreDefault = NSUserDefaults.standardUserDefaults()
+        if(scoreDefault.valueForKey("Score") != nil){
+            scoreVal = scoreDefault.valueForKey("Score") as! NSInteger!
+        }
         
-        let message = "Your Score : "
+        let scoreMessage = "Your Score : \(scoreVal)"
         
         // 3
-        let label = SKLabelNode(fontNamed: "Chalkduster")
-        label.text = message
-        label.fontSize = 40
-        //label.fontColor = SKColor.blackColor()
-        label.position = CGPoint(x: size.width/3, y: size.height/2)
-        addChild(label)
+        let score = SKLabelNode(fontNamed: "Chalkduster")
+        score.text = scoreMessage
+        score.fontSize = 40
+        score.position = CGPoint(x: size.width/2, y: size.height/2)
+        
+        
+        
+        var highScoreDefault = NSUserDefaults.standardUserDefaults()
+        if(highScoreDefault.valueForKey("HighScore") != nil){
+            highScore = highScoreDefault.valueForKey("HighScore") as! NSInteger!
+        }
+        
+        let hScoreMessage = "High Score : \(highScore)"
+        
+        // 3
+        let hScore = SKLabelNode(fontNamed: "Chalkduster")
+        hScore.text = hScoreMessage
+        hScore.fontSize = 80
+        hScore.position = CGPoint(x: size.width/2, y: size.height/1.5)
+        //addChild(hScore)
+        
+        
+        let newHighScore = SKLabelNode(fontNamed: "Chalkduster")
+        newHighScore.text = "Your New"
+        newHighScore.fontSize = 80
+        newHighScore.position = CGPoint(x: size.width/2, y: size.height/1.5)
+        if(scoreVal >= highScore){
+            hScore.position = CGPoint(x: size.width/2, y: size.height/2)
+            addChild(newHighScore)
+            addChild(hScore)
+        }
+        else{
+            addChild(hScore)
+            addChild(score)
+        }
         
         
         // 4
         runAction(SKAction.sequence([
-            SKAction.waitForDuration(3.0),
+            SKAction.waitForDuration(5.0),
             SKAction.runBlock() {
                 // 5
                 let reveal = SKTransition.flipHorizontalWithDuration(0.5)
