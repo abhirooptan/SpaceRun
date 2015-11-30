@@ -43,9 +43,6 @@ class MenuScene: SKScene {
         addChild(playGame)
     }
     
-    override func update(currentTime: CFTimeInterval) {
-    }
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
             if let location = touches.first?.locationInNode(self){

@@ -1,23 +1,21 @@
 //
-//  GameOverScene.swift
+//  GameOverScene1.swift
 //  SpaceRun
 //
-//  Created by Nakul on 23/11/2015.
+//  Created by 20061667 on 30/11/2015.
 //  Copyright © 2015 Abhiroop007. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import SpriteKit
 
-class GameOverScene: SKScene {
+class GameOverScene1: SKScene {
     
     var starfield: SKEmitterNode!
     var hScoreVal   = 0
     var scoreVal    = 0
     
-    init(size: CGSize, won:Bool) {
-        
-        super.init(size: size)
+    override func didMoveToView(view: SKView) {
         
         starfield = SKEmitterNode(fileNamed: "Starfield.sks")!
         starfield.position = CGPoint(x: 1024, y: 384)
@@ -64,22 +62,18 @@ class GameOverScene: SKScene {
             addChild(hScore)
             addChild(score)
         }
-
+        
         // 4
         runAction(SKAction.sequence([
             SKAction.waitForDuration(3.0),
             SKAction.runBlock() {
                 // 5
                 let reveal = SKTransition.flipHorizontalWithDuration(0.5)
-                let scene = MenuScene(size: size)
+                let scene = MenuScene(size:self.scene!.size)
                 self.view?.presentScene(scene, transition:reveal)
             }
             ]))
-        
-    }
-    
-    // 6
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
+
+

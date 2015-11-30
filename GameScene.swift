@@ -122,7 +122,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
                 let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
                 let transition = SKTransition.revealWithDirection(.Left, duration: 0.0)
-                let nextScene = GameOverScene(size: self.size, won: true)
+                //let nextScene = GameOverScene(size: self.size, won: true)
+                let nextScene = GameOverScene1(size:scene!.size)
                 nextScene.scaleMode = .AspectFill
                 
                 dispatch_after(dispatchTime, dispatch_get_main_queue(), {
@@ -133,6 +134,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if(objectSpawnRate > 0.5){
                 objectSpawnRate = 1.0 - Double(score/100)/10
+            }
+            if(objectSpawnRate == 0.6){
+                if(possibleEnemies.count == 3){
+                    possibleEnemies.append("asteroid-4")
+                }
             }
         }
         
