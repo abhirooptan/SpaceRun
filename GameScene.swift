@@ -8,6 +8,7 @@
 
 import GameplayKit
 import SpriteKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var starfield: SKEmitterNode!
@@ -48,6 +49,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var pauseButton = SKSpriteNode()
     let pauseButtonTex = SKTexture(imageNamed: "pausebtn")
     var pauseLabel : SKLabelNode!
+    
+    var backgroundMusic : AVAudioPlayer = GameViewController().playAudio("background")
+    var explosionSound  : AVAudioPlayer = GameViewController().playAudio("explosion")
     
     override func didMoveToView(view: SKView) {
         backgroundColor = UIColor.blackColor()
@@ -109,7 +113,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             highScore = highScoreDefault.valueForKey("HighScore") as! NSInteger!
         }
         
-        
+        backgroundMusic.prepareToPlay()
+        backgroundMusic.play()
+        backgroundMusic.numberOfLoops = -1
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -243,6 +249,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let explosion = SKEmitterNode(fileNamed: "explosion.sks")!
         explosion.position = player.position
         addChild(explosion)
+        
+        explosionSound.prepareToPlay()
+        explosionSound.play()
+        explosionSound.numberOfLoops = 0
         
         player.removeFromParent()
         

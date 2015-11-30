@@ -8,8 +8,24 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class GameViewController: UIViewController {
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    func playAudio(file:NSString)-> AVAudioPlayer{
+        
+        let soundFileURL = NSBundle.mainBundle().URLForResource(file as String, withExtension: "wav")
+        
+        do{
+            try audioPlayer = AVAudioPlayer(contentsOfURL: soundFileURL!)
+        } catch{
+            print("File not found")
+        }
+        
+        return audioPlayer!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

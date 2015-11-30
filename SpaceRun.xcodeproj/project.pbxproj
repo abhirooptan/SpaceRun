@@ -13,6 +13,7 @@
 		1B38FE9E1BFF6CC700F7952C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9D1BFF6CC700F7952C /* Main.storyboard */; };
 		1B38FEA01BFF6FE100F7952C /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B38FE9F1BFF6FE100F7952C /* MenuScene.sks */; };
 		1B38FEA41BFF706D00F7952C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38FEA31BFF706D00F7952C /* MenuScene.swift */; };
+		5428E3811C0B97ED0031BBD9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5428E3801C0B97ED0031BBD9 /* AVFoundation.framework */; };
 		544A986E1C0B687600BACA2D /* pausebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 544A986C1C0B687600BACA2D /* pausebtn.png */; settings = {ASSET_TAGS = (); }; };
 		544A98711C0B6A0A00BACA2D /* playbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 544A98701C0B6A0A00BACA2D /* playbtn.png */; settings = {ASSET_TAGS = (); }; };
 		547D79291BFF548600E4A6AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547D79281BFF548600E4A6AB /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 		1B38FE9D1BFF6CC700F7952C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1B38FE9F1BFF6FE100F7952C /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		1B38FEA31BFF706D00F7952C /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		5428E3801C0B97ED0031BBD9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		544A986C1C0B687600BACA2D /* pausebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pausebtn.png; path = ../../Downloads/pausebtn.png; sourceTree = "<group>"; };
 		544A98701C0B6A0A00BACA2D /* playbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = playbtn.png; path = ../../Downloads/playbtn.png; sourceTree = "<group>"; };
 		547D79251BFF548600E4A6AB /* SpaceRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5428E3811C0B97ED0031BBD9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +71,7 @@
 		547D791C1BFF548500E4A6AB = {
 			isa = PBXGroup;
 			children = (
+				5428E3801C0B97ED0031BBD9 /* AVFoundation.framework */,
 				547D79271BFF548600E4A6AB /* SpaceRun */,
 				547D79261BFF548600E4A6AB /* Products */,
 			);
