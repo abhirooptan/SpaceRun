@@ -35,6 +35,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var backgroundMusic : AVAudioPlayer = playAudio("backgroundMusic")
+        backgroundMusic.prepareToPlay()
+        backgroundMusic.play()
+        backgroundMusic.numberOfLoops = -1
+        
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
             let skView = self.view as! SKView

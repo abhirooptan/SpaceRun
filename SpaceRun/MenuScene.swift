@@ -13,16 +13,19 @@ class MenuScene: SKScene {
     
     var playButton = SKSpriteNode()
     let playButtonTex = SKTexture(imageNamed: "play")
+    var starfield: SKEmitterNode!
     
     override func didMoveToView(view: SKView) {
         
-        var background = SKSpriteNode(imageNamed: "background2")
-        background.anchorPoint = CGPoint(x: 0, y: 0)
-        background.position = .zero
-        addChild(background)
+        starfield = SKEmitterNode(fileNamed: "Starfield.sks")!
+        starfield.position = CGPoint(x: 1024, y: 384)
+        starfield.advanceSimulationTime(10)
+        starfield.zPosition = -1
+        addChild(starfield)
+        
         playButton = SKSpriteNode(texture: playButtonTex)
-        playButton.position = CGPointMake(frame.midX, frame.midY)
-        self.addChild(playButton)
+        playButton.position = CGPointMake(size.width/2, size.height/2)
+        addChild(playButton)
     }
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
