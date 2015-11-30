@@ -23,7 +23,7 @@ class GameOverScene: SKScene {
         starfield.position = CGPoint(x: 1024, y: 384)
         starfield.advanceSimulationTime(10)
         addChild(starfield)
-        starfield.zPosition = -1
+        starfield.zPosition = -0.9
         
         backgroundColor = SKColor.blackColor()
         

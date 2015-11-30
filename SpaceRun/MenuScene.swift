@@ -11,30 +11,49 @@ import SpriteKit
 
 class MenuScene: SKScene {
     
-    var playButton = SKSpriteNode()
-    let playButtonTex = SKTexture(imageNamed: "play")
     var starfield: SKEmitterNode!
+    var player: SKSpriteNode!
+    var gameLabel : SKLabelNode!
+    var playGame : SKLabelNode!
     
     override func didMoveToView(view: SKView) {
+        
+        backgroundColor = UIColor.blackColor()
         
         starfield = SKEmitterNode(fileNamed: "Starfield.sks")!
         starfield.position = CGPoint(x: 1024, y: 384)
         starfield.advanceSimulationTime(10)
-        starfield.zPosition = -1
+        starfield.zPosition = -0.9
         addChild(starfield)
         
-        playButton = SKSpriteNode(texture: playButtonTex)
-        playButton.position = CGPointMake(size.width/2, size.height/2)
-        addChild(playButton)
+        player = SKSpriteNode(imageNamed: "player")
+        player.position = CGPoint(x: 200, y: size.height/2)
+        addChild(player)
+        
+        gameLabel = SKLabelNode(fontNamed: "Chalkduster")
+        gameLabel.text = "Space Run"
+        gameLabel.position = CGPoint(x: size.width/2 , y: size.height/1.2)
+        gameLabel.fontSize = 100
+        addChild(gameLabel)
+        
+        playGame = SKLabelNode(fontNamed: "Chalkduster")
+        playGame.text = "Play Game"
+        playGame.position = CGPoint(x: size.width/2 , y: size.height/2)
+        playGame.fontSize = 60
+        addChild(playGame)
     }
+    
+    override func update(currentTime: CFTimeInterval) {
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
             if let location = touches.first?.locationInNode(self){
                 let touchedNode = nodeAtPoint(location)
     
-                if touchedNode == playButton{
+                if touchedNode == playGame{
                     print("touch")
-                    let transition = SKTransition.revealWithDirection(.Down, duration: 1.0)
+                    let transition = SKTransition.revealWithDirection(.Down, duration: 0.0)
                     let nextScene = GameScene(size:scene!.size)
                     nextScene.scaleMode = .AspectFill
                     scene?.view?.presentScene(nextScene, transition: transition)

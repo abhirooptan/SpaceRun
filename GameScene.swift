@@ -41,13 +41,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgroundColor = UIColor.blackColor()
         
         starfield = SKEmitterNode(fileNamed: "Starfield.sks")!
-        starfield.position = CGPoint(x: 1024, y: 280)
+        starfield.position = CGPoint(x: 1024, y: 370)
         starfield.advanceSimulationTime(10)
-        starfield.zPosition = -1
+        starfield.zPosition = -0.9
         addChild(starfield)
         
         player = SKSpriteNode(imageNamed: "player")
-        player.position = CGPoint(x: 200, y: 384)
+        player.position = CGPoint(x: 200, y: size.height/2)
         player.physicsBody = SKPhysicsBody(texture: player.texture!, size: player.size)
         player.physicsBody!.contactTestBitMask = 1
         addChild(player)
@@ -121,7 +121,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let seconds = 2.0
                 let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
                 let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                let transition = SKTransition.revealWithDirection(.Right, duration: 0.0)
+                let transition = SKTransition.revealWithDirection(.Left, duration: 0.0)
                 let nextScene = GameOverScene(size: self.size, won: true)
                 nextScene.scaleMode = .AspectFill
                 

@@ -13,9 +13,7 @@ import AVFoundation
 class GameViewController: UIViewController {
     
     var audioPlayer:AVAudioPlayer?
-    var score           : Int = 0
-    var lives           : Int = 3
-    var objectSpawnRate : Double = 1.0
+    var starfield : SKEmitterNode!
     
     
     func playAudio(file:NSString)-> AVAudioPlayer {
@@ -40,11 +38,17 @@ class GameViewController: UIViewController {
         backgroundMusic.play()
         backgroundMusic.numberOfLoops = -1
         
+        starfield = SKEmitterNode(fileNamed: "Starfield.sks")!
+        starfield.position = CGPoint(x: 1024, y: 384)
+        starfield.advanceSimulationTime(10)
+        starfield.zPosition = -1
+        starfield.hidden = false
+        
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
             let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
+            //skView.showsFPS = true
+            //skView.showsNodeCount = true
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
