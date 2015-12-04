@@ -27,7 +27,7 @@ class GameOverScene1: SKScene {
         backgroundColor = SKColor.blackColor()
         
         // bringing in the score data
-        var scoreDefault = NSUserDefaults.standardUserDefaults()
+        let scoreDefault = NSUserDefaults.standardUserDefaults()
         if(scoreDefault.valueForKey("Score") != nil){
             scoreVal = scoreDefault.valueForKey("Score") as! NSInteger!
         }
@@ -40,7 +40,7 @@ class GameOverScene1: SKScene {
         score.position = CGPoint(x: size.width/2, y: size.height/2)
         
         // bringing in HighScore data
-        var hScoreDefault = NSUserDefaults.standardUserDefaults()
+        let hScoreDefault = NSUserDefaults.standardUserDefaults()
         if(hScoreDefault.valueForKey("HighScore") != nil){
             hScoreVal = scoreDefault.valueForKey("HighScore") as! NSInteger!
         }

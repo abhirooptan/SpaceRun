@@ -35,7 +35,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         // setting the background music
-        var backgroundMusic : AVAudioPlayer = playAudio("backgroundMusic")
+        let backgroundMusic : AVAudioPlayer = playAudio("backgroundMusic")
         backgroundMusic.prepareToPlay()
         backgroundMusic.play()
         backgroundMusic.numberOfLoops = -1
