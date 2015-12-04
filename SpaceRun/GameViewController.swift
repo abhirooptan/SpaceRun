@@ -2,8 +2,8 @@
 //  GameViewController.swift
 //  SpaceRun
 //
-//  Created by Abhiroop007 on 20/11/2015.
-//  Copyright (c) 2015 Abhiroop007. All rights reserved.
+//  Created by Abhiroop on 20/11/2015.
+//  Copyright (c) 2015 Abhiroop. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
     var audioPlayer:AVAudioPlayer?
     var starfield : SKEmitterNode!
     
-    
+    // function to set the audio file
     func playAudio(file:NSString)-> AVAudioPlayer {
         
         let soundFileURL = NSBundle.mainBundle().URLForResource(file as String,
@@ -30,31 +30,28 @@ class GameViewController: UIViewController {
         return audioPlayer!
     }
     
+    // this method loads the menu scene and plays the background music
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setting the background music
         var backgroundMusic : AVAudioPlayer = playAudio("backgroundMusic")
         backgroundMusic.prepareToPlay()
         backgroundMusic.play()
         backgroundMusic.numberOfLoops = -1
         
-        starfield = SKEmitterNode(fileNamed: "Starfield.sks")!
-        starfield.position = CGPoint(x: 1024, y: 384)
-        starfield.advanceSimulationTime(10)
-        starfield.zPosition = -1
-        starfield.hidden = false
-        
+        // loading the Menu Scene
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
-            let skView = self.view as! SKView
-            //skView.showsFPS = true
-            //skView.showsNodeCount = true
+            let skView              = self.view as! SKView
+            skView.showsFPS         = false
+            skView.showsNodeCount   = false
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+            scene.scaleMode         = .AspectFill
             
             skView.presentScene(scene)
         }

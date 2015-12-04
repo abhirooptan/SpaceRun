@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SpaceRun
 //
-//  Created by Abhiroop007 on 20/11/2015.
-//  Copyright © 2015 Abhiroop007. All rights reserved.
+//  Created by Abhiroop on 20/11/2015.
+//  Copyright © 2015 Abhiroop. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  MenuScene.swift
 //  SpaceRun
 //
-//  Created by 20061667 on 20/11/2015.
-//  Copyright © 2015 Abhiroop007. All rights reserved.
+//  Created by Abhiroop on 20/11/2015.
+//  Copyright © 2015 Abhiroop. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,7 @@ class MenuScene: SKScene {
     var gameLabel : SKLabelNode!
     var playGame : SKLabelNode!
     
+    // this method sets the scene displaying all the assets
     override func didMoveToView(view: SKView) {
         
         backgroundColor = UIColor.blackColor()
@@ -43,11 +44,13 @@ class MenuScene: SKScene {
         addChild(playGame)
     }
     
+    // this method changes the scene when play game is touched
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
             if let location = touches.first?.locationInNode(self){
                 let touchedNode = nodeAtPoint(location)
-    
+                
+                // checking the touch for play game
                 if touchedNode == playGame{
                     print("touch")
                     let transition = SKTransition.revealWithDirection(.Down, duration: 0.0)
